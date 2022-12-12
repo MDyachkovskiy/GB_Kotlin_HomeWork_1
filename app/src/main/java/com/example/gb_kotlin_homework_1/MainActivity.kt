@@ -8,13 +8,6 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val textView: TextView = findViewById(R.id.textView)
-    val countString = textView.text.toString()
-    val tvCity: TextView = findViewById(R.id.textViewCity)
-    val tvTemperature: TextView = findViewById(R.id.textViewTemperature)
-    val tvSibling: TextView = findViewById(R.id.textViewSibling)
-
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,13 +39,17 @@ class MainActivity : AppCompatActivity() {
 
 
        fun increase() {
-            var count: Int = Integer.parseInt(countString)
+           val textView: TextView = findViewById(R.id.textView)
+           val countString = textView.text.toString()
+           var count: Int = Integer.parseInt(countString)
             count++
 
             textView.text = count.toString()
         }
 
         fun decrease() {
+            val textView: TextView = findViewById(R.id.textView)
+            val countString = textView.text.toString()
             var count: Int = Integer.parseInt(countString)
             count--
 
@@ -66,12 +63,17 @@ class MainActivity : AppCompatActivity() {
         var moscow = Weather("Москва", 15)
 
         fun initialize() {
+            val tvCity: TextView = findViewById(R.id.textViewCity)
+            val tvTemperature: TextView = findViewById(R.id.textViewTemperature)
             tvCity.text = moscow.town
-            tvTemperature.setText(moscow.temperature)
+            var temp = moscow.temperature
+            tvTemperature.text = temp.toString()
         }
 
         //создать объект и вывести значение copy на экран
         fun showResult() {
+
+            val tvSibling: TextView = findViewById(R.id.textViewSibling)
 
             data class Person(
                 var name: String = "Василий",

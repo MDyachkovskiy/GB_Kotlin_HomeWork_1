@@ -25,27 +25,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="145dp"
         android:backgroundTint="@color/btn_color"
         android:onClick="decrease"
         android:text="Initialize"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="419dp" />
+        app:layout_constraintTop_toBottomOf="@id/button2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSibling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="135dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="145dp"
         android:backgroundTint="@color/btn_color"
         android:onClick="decrease"
         android:text="Имя родственника"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="593dp" />
+        app:layout_constraintTop_toBottomOf="@id/tvSibling"
+        app:layout_constraintVertical_bias="0.07" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
@@ -121,7 +126,7 @@
         android:id="@+id/tvSibling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="284dp"
         android:text="Он ваш родственник?"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
